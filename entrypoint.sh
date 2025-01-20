@@ -9,4 +9,4 @@ cd "${CODE_PATH}"
 
 git config --global init.defaultBranch master
 
-idf.py build -v
+idf.py build
