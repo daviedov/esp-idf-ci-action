@@ -7,6 +7,9 @@ CODE_PATH="$1"
 
 cd "${CODE_PATH}"
 
+echo "123 ${ACCESS_TOKEN}"
+nslookup git.avedov.info
+
 git config --global init.defaultBranch master
 idf.py reconfigure  
 idf.py build
