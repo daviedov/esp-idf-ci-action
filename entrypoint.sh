@@ -7,4 +7,6 @@ CODE_PATH="$1"
 
 cd "${CODE_PATH}"
 
-idf.py build
+git config --global init.defaultBranch master
+
+idf.py build -v
