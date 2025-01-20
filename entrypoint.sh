@@ -8,5 +8,5 @@ CODE_PATH="$1"
 cd "${CODE_PATH}"
 
 git config --global init.defaultBranch master
-
+idf.py reconfigure  
 idf.py build
