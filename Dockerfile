@@ -1,4 +1,4 @@
-FROM espressif/idf:v5.3.1
+FROM espressif/idf:${IDF_VERSION}
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
