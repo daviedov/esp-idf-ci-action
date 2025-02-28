@@ -4,8 +4,14 @@ inputs:
   path:
     description: 'Relative path under $GITHUB_WORKSPACE to place the repository'
     default: ''
+  idf_version:
+    description: "ESP-IDF version to use"
+    default: "v5.3.1"
+    
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  build-args:
+    IDF_VERSION: ${{ inputs.idf_version }}
   args:
     - ${{ inputs.path }}
