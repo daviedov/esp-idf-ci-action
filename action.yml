@@ -7,14 +7,10 @@ inputs:
     required: false
     default: ""
 
-  idf_version:
-    description: "ESP-IDF version to use"
-    required: false
-    default: "v5.3.1"
-
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.idf_version }}
     - ${{ inputs.path }}
+  env:
+    BUILD_PATH: ${{ inputs.path }}
