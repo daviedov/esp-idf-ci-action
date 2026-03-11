@@ -1,14 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/sh
 set -e
 
-CODE_PATH="$1"
+IDF_VERSION=$1
+PROJECT_PATH=$2
 
-. $IDF_PATH/export.sh
+echo "Using ESP-IDF version: $IDF_VERSION"
+echo "Project path: $PROJECT_PATH"
 
-echo "---------------"
-echo "${CODE_PATH}"
-echo "---------------"
-
-cd "${CODE_PATH}"
+cd "$GITHUB_WORKSPACE/$PROJECT_PATH"
 
 idf.py build
